@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    /* Custom properties for theme colors, font sizes, and z-index values */
+    --header-height: 3.5rem;
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 60%);
+    --body-color: hsl(0, 0%, 0%);
+    --body-font: "Montserrat", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 1152px) {
+    :root {
+        /* Adjust font sizes for larger screens */
+        --h1-font-size: 2.25rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* Global reset for box-sizing, padding, and margin */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Body styling with background image and default font settings */
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: white;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url(l\ background.png);
+}
+
+/* Remove default list styling */
+ul {
+    list-style: none;
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Ensure images do not exceed container width */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container with max-width and horizontal margin */
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+/* Prevent overflow */
+.main {
+    overflow: hidden;
+}
+
+/* Fixed header with background color and border */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    border-bottom: 1px solid var(--text-color);
+    z-index: var(--z-fixed);
+    padding-bottom: 20px;
+}
+
+/* Navigation bar styling */
+.nav {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.nav__logo {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+}
+
+/* Toggle and close button styling */
+.nav__toggle,
+.nav__close {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* Mobile menu styling */
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: var(--body-color);
+        border-bottom: 1px solid var(--text-color);
+        width: 100%;
+        padding-block: 4.5rem 3.5rem;
+        transition: top .4s;
+    }
+}
+
+/* Navigation list styling */
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+/* Navigation link styling */
+.nav__link {
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+    transition: color .3s;
+}
+
+/* Change link color on hover */
+.nav__link:hover {
+    color: var(--title-color);
+}
+
+/* Social media icons styling */
+.nav__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Social media link styling */
+.nav__social-link {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color .4s;
+}
+
+/* Change social link color on hover */
+.nav__social-link:hover {
+    color: var(--title-color);
+}
+
+/* Close button position */
+.nav__close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+/* Show menu class */
+.show-menu {
+    top: 0;
+}
+
+/* Grid layout for home sections */
+.home__container,
+.home__data,
+.home__content,
+.home__images,
+.home__info-content {
+    display: grid;
+}
+
+/* Padding and row gap for home container */
+.home__container {
+    padding-block: 9rem 3rem;
+    row-gap: 3rem;
+}
+
+/* Center align text and set row gap for home data */
+.home__data {
+    text-align: center;
+    row-gap: 3.5rem;
+}
+
+/* Row gap for home content */
+.home__content {
+    row-gap: .75rem;
+}
+
+/* Flexbox layout for home stars */
+.home__stars {
+    display: flex;
+    column-gap: .25rem;
+    justify-content: center;
+}
+
+/* Home title styling */
+.home__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+}
+
+/* Home price styling */
+.home__price {
+    font-size: var(--h3-font-size);
+}
+
+/* Home button styling */
+.home__button {
+    border: 1px solid var(--text-color);
+    padding: 1rem 1.5rem;
+    justify-self: center;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    letter-spacing: 3px;
+    font-weight: var(--font-semi-bold);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    transition: border-color .4s;
+}
+
+/* Icon font size inside button */
+.home__button i {
+    font-size: 1.25rem;
+}
+
+/* Change border color on hover for home button */
+.home__button:hover {
+    border-color: var(--title-color);
+}
+
+/* Position for home images */
+.home__images {
+    position: relative;
+}
+
+/* Set width and margin for home image */
+.home__img {
+    width: 180px;
+    margin-inline: auto;
+}
+
+/* Flexbox layout for home info */
+.home__info {
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    margin-top: 2rem;
+}
+
+/* Width for home info image */
+.home__info-img {
+    width: 120px;
+}
+
+/* Row gap for home info content */
+.home__info-content {
+    row-gap: 1.5rem;
+}
+
+/* Font size for home info description */
+.home__info-description {
+    font-size: var(--small-font-size);
+}
+
+/* Styling for home button link */
+.home__button-link {
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+    justify-self: flex-start;
+    transition: color .4s;
+}
+
+/* Change color on hover for home button link */
+.home__button-link:hover {
+    color: var(--title-color);
+}
+
+/* Initial margin for swiper */
+.swiper {
+    margin-inline: initial;
+}
+
+/* Position for swiper pagination bullets */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -2rem;
+}
+
+/* Styling for pagination bullet */
+.swiper-pagination-bullet {
+    width: 1rem;
+    height: .15rem;
+    border-radius: 0;
+    background-color: var(--text-color);
+    opacity: 1;
+    transition: background-color .3s, width .3s;
+}
+
+/* Styling for active pagination bullet */
+.swiper-pagination-bullet-active {
+    width: 1.5rem;
+    background-color: var(--title-color);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(0, 0%, 12%);
+}
+
+/* Scrollbar thumb styling */
+::webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 20%);
+}
+
+/* Adjustments for screens less than 320px */
+@media screen and (max-width: 320px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .home__info {
+        flex-direction: column;
+        row-gap: 2rem;
+        text-align: center;
+    }
+
+    .home__button-link {
+        justify-self: center;
+    }
+}
+
+/* Adjustments for screens greater than 576px */
+@media screen and (min-width: 576px) {
+    .home__container {
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+}
+
+/* Adjustments for screens greater than 1023px */
+@media screen and (min-width: 1023px) {
+    .nav {
+        height: calc(var(--header-height) + 2rem);
+    }
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+    .nav__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+    }
+    .nav__list {
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+    .nav__social {
+        margin: 0;
+    }
+    .home__container {
+        height: 100vh;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        column-gap: 4rem;
+    }
+    .home__data {
+        text-align: initial;
+    }
+    .home__stars {
+        justify-content: initial;
+    }
+    .home__button {
+        justify-self: flex-start;
+    }
+    .home__info {
+        margin: 0;
+        flex-direction: column;
+        row-gap: 1.25rem;
+        align-items: initial;
+    }
+}
+
+/* Adjustments for screens greater than 1152px */
+@media screen and (min-width: 1152px) {
+    .container {
+        margin-inline: auto;
+    }
+    .home__container {
+        height: initial;
+        grid-template-columns: repeat(3, 320px);
+        justify-content: space-between;
+        padding-block: 11rem 4rem;
+    }
+    .home__data {
+        row-gap: 9.5rem;
+    }
+    .home__stars {
+        column-gap: .75rem;
+    }
+    .home__img {
+        width: 300px;
+    }
+    .home__info-img {
+        width: 150px;
+    }
+    .home__info-description {
+        font-size: var(--normal-font-size);
+    }
+    .home__info-content {
+        row-gap: 7.5rem;
+    }
+}
+
+/* Adjustments for very large screens */
+@media screen and (min-width: 1500px) and (min-height: 1032px) {
+    .home__container {
+        height: 100vh;
+        align-items: center;
+    }
+}
+
+/* Background styling */
+.background {
+    background-image: url(l\ background.png);
+    z-index: 1;
+}
+
+/* Big box container styling */
+.big-box {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: -800px;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10%;
+    z-index: 2;
+}
+
+/* Big box title styling */
+.big-box h2 {
+    color: white;
+}
+
+/* Paragraph styling inside big box */
+p {
+    color: white;
+    margin-top: 30px;
+}
+
+/* Second big box container styling */
+.big-box2 {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 200px;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10%;
+    z-index: 2;
+}
+
+/* Second big box title styling */
+.big-box2 h2 {
+    color: white;
+}
+
+/* Paragraph styling inside second big box */
+p {
+    color: white;
+}
+
+/* Third big box container styling */
+.big-box3 {
+    width: 700px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 200px;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10%;
+}
+
+/* Third big box title styling */
+.big-box3 h2 {
+    color: white;
+}
+
+/* Paragraph styling inside third big box */
+p {
+    color: white;
+}
+
+/* Fourth big box container styling */
+.big-box4 {
+    width: 700px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10%;
+}
+
+/* Fourth big box title styling */
+.big-box4 h2 {
+    color: white;
+}
+
+/* Paragraph styling inside fourth big box */
+p {
+    color: white;
+}
+
+/* Footer styling */
+.footer1 {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove default list styling for footer */
+.footer1 ul {
+    list-style: none;
+}
+
+/* Footer color and background settings */
+.footer1 {
+    color: #fff;
+    background: #121315;
+}
+
+/* Footer paragraph styling */
+.footer1 p {
+    color: #ccc;
+    max-width: 25em;
+    font-size: 0.9em;
+    line-height: 23px;
+}
+
+/* Footer link styling */
+.footer1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer heading styling */
+.footer h4 {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+/* Footer container with max-width and padding */
+.footer1 .container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* Footer background image and overlay */
+.footer1 {
+    position: relative;
+    background: url(footer.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Overlay for footer */
+.footer1::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Relative positioning for footer container */
+.footer1 .container4 {
+    position: relative;
+}
+
+/* Relative positioning for another footer container */
+.footer1 .container5 {
+    position: relative;
+}
+
+/* Flexbox layout for footer sections */
+.footer1 .footer-top .container4, .footer1 .col2, .footer1 .footer-bottom .container5 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+/* Padding and alignment for footer bottom section */
+.footer1 .footer-bottom .container5 {
+    padding: 1em 2em;
+    align-items: center;
+}
+
+/* Margin for menu items in footer */
+.footer1 .menu li {
+    margin-bottom: 0.6em;
+}
+
+/* Underline on hover for footer links */
+.footer1 .menu a:hover {
+    text-decoration: underline;
+}
+
+/* Brand styling in footer */
+.brand {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+/* Media icons styling */
+.media-icons li, .service-icons li {
+    display: inline-block;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+/* Media link styling */
+.media-icons a {
+    font-size: 1.1em;
+    width: 2em;
+    height: 2em;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Change background on hover for media links */
+.media-icons a:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* Service icon styling */
+.service-icons a {
+    font-size: 1.6em;
+}
+
+/* Change color on hover for service icons */
+.service-icons a:hover {
+    color: #dbdbdb;
+}
+
+/* Border for footer bottom */
+.footer-bottom {
+    border-top: 1px #dbdbdb solid;
+}

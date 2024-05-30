@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"> <!-- Link to the Remixicon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Link to the Font Awesome library -->
+    <link rel="stylesheet" href="cont.css" /> <!-- Link to the custom CSS file for the contact page -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header" id="header"> <!-- Defines the header of the page and assigns an ID for JavaScript targeting -->
+        <nav class="nav container">  <!-- Defines the navigation menu and applies a class for styling -->
+            <a href="#" class="nav__logo">INTERNATIONAL <br> WATCHES</a>  <!-- Defines the logo of the website -->
+
+            <div class="nav__menu" id="nav-menu"> <!-- Defines the navigation menu and assigns an ID for JavaScript targeting -->
+                <ul class="nav__list">  <!-- Defines the list of navigation items -->
+                    <li class="nav__item"> <!-- Defines a navigation item -->
+                        <a href="index.html" class="nav__link">HOME</a> <!-- Defines the link for the navigation item -->
+                    </li>
+
+                    <li class="nav__item">  <!-- Defines a navigation item -->
+                        <a href="shop.html" class="nav__link">SHOP</a>  <!-- Defines the link for the navigation item -->
+                    </li>
+
+                    <li class="nav__item"> <!-- Defines a navigation item -->
+                        <a href="Gallery.html" class="nav__link">GALLERY</a> <!-- Defines the link for the navigation item -->
+                    </li>
+
+                    <li class="nav__item"> <!-- Defines a navigation item -->
+                        <a href="Contact us.html" class="nav__link">CONTACT US</a> <!-- Defines the link for the navigation item -->
+                    </li>
+
+                    <li class="nav__item"> <!-- Defines a navigation item -->
+                        <a href="FAQs.html" class="nav__link">FAQs</a> <!-- Defines the link for the navigation item -->
+                    </li>
+                </ul>
+
+              <div class="nav__social"> <!-- Defines the social media icons for the navigation menu -->
+                  <a href="https://www.facebook.com/" target="_blank" class="nav__social-link">
+                      <i class="ri-facebook-circle-line"></i> <!-- Defines the icon for the social media link -->
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+                      <i class="ri-instagram-line"></i> <!-- Defines the icon for the social media link -->
+                  </a>
+                  <a href="https://twitter.com/" target="_blank" class="nav__social-link">
+                      <i class="ri-twitter-x-line"></i> <!-- Defines the icon for the social media link -->
+                  </a>
+              </div>
+              <div class="nav__close" id="nav-close"> <!-- Defines the close button for the navigation menu -->
+                  <i class="ri-close-line"></i> <!-- Defines the icon for the toggle button -->
+              </div>
+          </div>
+          <div class="nav__toggle" id="nav-toggle"> <!-- Defines the toggle button for the navigation menu -->
+              <i class="ri-menu-line"></i> <!-- Defines the icon for the toggle button -->
+          </div>
+      </nav>
+  </header>
+
+
+    
+    <div class="container1"> <!-- Container for the contact form -->
+      <span class="big-circle"></span> <!-- Decorative circle element -->
+      <img src="img/shape.png" class="square" alt="" /> <!-- Decorative square element -->
+      <div class="form"> <!-- Form for the contact information -->
+        <div class="contact-info"> <!-- Contact information container -->
+          <h3 class="title">Let's get in touch</h3> <!-- Title for the contact information -->
+          <p class="text"> <!-- Description for the contact information -->
+            Please send us your feedbacks and if you need any assistance, our service is 24/7. 
+            Make sure to fill the form and we will get in contact within 24 hours.
+          </p>
+
+          <div class="info">  <!-- Contact information details -->
+            <div class="information"> <!-- Contact information item -->
+              <img src="map.jpg" class="icon" alt="" />
+              <p>Dubai Silicon Oasis<br>
+                 Palace Tower Office no-205<br>
+                 Dubai/UAE</p>
+            </div>
+            <div class="information"> <!-- Contact information item -->
+              <img src="email.jpg" class="icon" alt="" />
+              <p>InternationalWatches@gmail.com</p>
+            </div>
+            <div class="information1"> <!-- Contact information item -->
+              <img src="phone.png" class="icon1" alt="" />
+              <p>+971 52 123 4567</p>
+            </div>
+          </div>
+
+          <div class="social-media"> <!-- Container for the social media icons -->
+            <p>Connect with us :</p> <!-- Title for the social media icons -->
+            <div class="social-icons"> <!-- Icons for the social media platforms -->
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form"> <!-- Container for the contact form -->
+          <span class="circle one"></span> <!-- Decorative circle elements -->
+          <span class="circle two"></span> <!-- Decorative circle elements -->
+
+          <form action="index.html" autocomplete="off"> <!-- Form for the contact information -->
+            <h3 class="title">Contact us</h3>  <!-- Title for the contact form -->
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label> <!-- Input container for the Username -->
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label> <!-- Input container for the Email -->
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label> <!-- Input container for Message -->
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" /> <!-- Submit button for the form -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer1"> <!-- Footer of the page -->
+        <div class="footer-top"> <!-- Top section of the footer -->
+            <div class="container4"> <!-- Container for the footer content -->
+                <div class="col1"> <!-- Column for the brand logo and social media icons -->
+                    <a href="#" class="brand">INTERNATIONAL <br> WATCHES</a>  <!-- Brand logo for the website -->
+                    <ul class="media-icons"> <!-- Social media icons for the website -->
+                        <li>
+                            <a href="#">
+                                <i class="ri-facebook-circle-line"></i> <!-- Facebook icon -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-instagram-line"></i> <!-- Instagram icon -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-twitter-x-line"></i> <!-- Twitter icon -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col2"> <!-- Column for the navigation menu -->
+                    <ul class="menu"> <!-- List of navigation items -->
+                        <li>
+                            <h4>About</h4> <!-- Heading for the navigation items -->
+                        </li>
+
+                        <li>
+                            <a href="#">Services</a>  <!-- Navigation item for services -->
+                        </li>
+
+                        <li>
+                            <a href="#">Portfolio</a>  <!-- Navigation item for portfolio -->
+                        </li>
+
+                        <li>
+                            <a href="#">Pricing</a>  <!-- Navigation item for pricing -->
+                        </li>
+
+                        <li>
+                            <a href="#">Customer</a>  <!-- Navigation item for customer -->
+                        </li>
+
+                        <li>
+                            <a href="#">Career</a>  <!-- Navigation item for career -->
+                        </li>
+                    </ul>
+
+                    <ul class="menu"> <!-- List of navigation items -->
+                        <li>
+                            <h4>Resources</h4> <!-- Heading for the navigation items -->
+                        </li>
+
+                        <li>
+                            <a href="#">Docs</a> <!-- Navigation item for docs -->
+                        </li>
+
+                        <li>
+                            <a href="#">Block</a> <!-- Navigation item for block -->
+                        </li>
+
+                        <li>
+                            <a href="#">eBooks</a> <!-- Navigation item for eBooks -->
+                        </li>
+
+                        <li>
+                            <a href="#">Webinars</a> <!-- Navigation item for Webinars -->
+                        </li>
+                    </ul>
+
+                    <ul class="menu"> <!-- List of navigation items -->
+                        <li>
+                            <h4>Contact</h4> <!-- Heading for the navigation items -->
+                        </li>
+                        <li>
+                            <a href="#">Help</a> <!-- Navigation item for help -->
+                        </li>
+
+                        <li>
+                            <a href="#">Sales</a> <!-- Navigation item for sales -->
+                        </li>
+
+                        <li>
+                            <a href="#">Advertise</a> <!-- Navigation item for advertise -->
+                        </li>
+
+                        <li>
+                            <a href="#">Location</a> <!-- Navigation item for location -->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col3"> <!-- Column for additional information -->
+                    <h4>Additional Info</h4>
+                    <p>We are located in Dubai Silicon Oasis <br>  <!-- Paragraph for the additional information -->
+                        Palace Tower Office no-205 <br>
+                        Dubai/UAE</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom"> <!-- Bottom section of the footer -->
+                <div class="container5"> <!-- Container for the footer bottom content -->
+                    <p>International Watches.All RIghts Reserved</p> <!-- Paragraph for the copyright information -->
+                    <ul class="service-icons"> <!-- List of payment icons -->
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-cc-amazon-pay"></i> <!-- Payment icon for Amazon Pay -->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-cc-mastercard"></i> <!-- Payment icon for Mastercard -->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-cc-apple-pay"></i> <!-- Payment icon for Apple Pay -->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-cc-stripe"></i> <!-- Payment icon for Stripe -->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-cc-visa"></i> <!-- Payment icon for Visa -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="cont.js"></script> <!-- Link to the custom JavaScript file for the contact page -->
+    <script src="gsap.min.js"></script> <!-- Link to the GSAP library -->
+    <script src="swiper-bundle.min.js"></script> <!-- Link to the Swiper library -->
+    <script src="main.js"></script> <!-- Link to the custom JavaScript file -->
+  </body>
+</html>
